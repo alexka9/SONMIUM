@@ -1,0 +1,188 @@
+/* General */
+body {
+    background-color: #1e2a38; 
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+}
+  
+/* Encabezado */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #051e3a;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+  
+body.scrolled header {
+    top: -100px; /* Esconde el encabezado al hacer scroll */
+}
+  
+header .logo img {
+    height: 50px;
+}
+  
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../img/NOMBRE_20241203_212558_0000.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center; 
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+  
+.hero-content {
+    position: absolute;
+    top: 53%; /* Cambia este valor para bajarlo más (ej. 70% o 80%) */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado horizontal y vertical */
+    text-align: center;
+    color: #ffffff; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+  
+  
+/* Secciones */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+  
+#quienes-somos .content {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    gap: 20px; 
+}
+  
+#quienes-somos img {
+    width: 50%;
+    border-radius: 10px;
+}
+  
+#que-ofrecemos .services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+  
+#contactanos .services {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#nuestro_equipo .services {
+    display: flex; /* Coloca las tarjetas en una fila horizontal */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+.service-card {
+    background: #32323a;
+    padding: 20px; 
+    border-radius: 10px;
+    width: 25%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.service-card2 {
+    background: #32323a;
+    padding: 20px; 
+    border-radius: 10px;
+    width: 25%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card3 {
+    text-align: center; /* Centra el contenido dentro de cada tarjeta */
+    width: 100%; /* Ajusta el ancho de cada tarjeta */
+}
+
+img .bordes{
+    border: 5% solid white; 
+
+}
+  
+.medio_fotos {
+    margin-top: 10px; /* Espaciado entre la imagen y el texto */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: #ffffff; /* Color del texto */
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+  
+.service-card p {
+    margin-bottom: 0;
+}
+  
+.medio{
+    text-align: center;
+    font-size: large;
+    padding: 30px; 
+}
+
+.medio2{
+    text-align: center;
+    font-size: large;
+    padding: 30px; 
+}
+
+.medio_fotos{
+    font-weight: bold;
+    font-size: large;
+    margin-top: 10px;
+}
+
+/* Scroll effect */
+body.scrolled header {
+    top: -100px;
+}
+  
+@media (max-width: 700px) {
+    .hero{
+        height: 50vh;
+    }
+
+    #quienes-somos .content {
+        flex-direction: column; /* Pone el texto y la imagen en columna */
+    }
+
+    #quienes-somos img {
+        width: 100%; /* Ajusta el tamaño de la imagen */
+    }
+
+    .service-card, .service-card2{
+        width: 90%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
+    }
+ 
+    .service-card3{
+        width: 100%;
+    }
+
+
+    .services {
+        flex-direction: column; /* Cambia la disposición a columnas */
+        gap: 15px; /* Reduce el espacio entre tarjetas */
+    }
+
+    .hero-content {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+}
